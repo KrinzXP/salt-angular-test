@@ -1,0 +1,10 @@
+<h2>People</h2>
+<mat-grid-list cols="3" rowHeight="125px" gutterSize="10px">
+  <mat-grid-tile
+    *ngFor="let tile of peopleTile"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color">
+    <mat-grid-tile-footer>{{tile.text}}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>

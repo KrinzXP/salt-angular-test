@@ -1,0 +1,13 @@
+<h2>Channels</h2>
+<mat-divider></mat-divider>
+
+<mat-grid-list cols="2" rowHeight="100px" gutterSize="10px">
+  <mat-grid-tile
+    *ngFor="let tile of channelTile"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="'black'">
+    <mat-grid-tile-footer>{{tile.text}}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+

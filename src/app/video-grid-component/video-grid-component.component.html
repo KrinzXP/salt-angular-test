@@ -1,0 +1,16 @@
+<h2>Videos</h2>
+<mat-grid-list cols="3" rowHeight="125px" gutterSize="10px">
+  <mat-grid-tile
+    *ngFor="let tile of videoTile"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color">
+    <mat-grid-tile-footer>
+      <span matLine>{{tile.text}}</span>
+      <span matLine>{{tile.user}}</span>
+      <span class="text-right" *ngIf="tile.user != ''">
+        <mat-icon>person</mat-icon>{{tile.viewers}}
+      </span>
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
