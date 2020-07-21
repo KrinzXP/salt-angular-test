@@ -17,6 +17,14 @@ export class VideoGridComponentComponent implements OnInit {
   constructor(private videoService: VideosServiceService) { }
 
   ngOnInit(): void {
+    this.videoTile = [
+      {user: 'Samantha Abdul', text: 'How To Master The Disaster', cols: 2, rows: 2, color: 'lightblue', viewers: 0},
+      {user: 'Grant', text: 'How to Build a Working R2D2', cols: 1, rows: 1, color: 'lightgreen', viewers: 0},
+      {user: 'Ares', text: 'Grazed By Apocalypse', cols: 1, rows: 1, color: 'lightpink', viewers: 0},
+      {user: 'Peter Swensens', text: 'Breaking Dawn', cols: 1, rows: 1, color: '#DDBDF1', viewers: 0},
+      {user: 'Bart Rudolph', text: 'Firestorm', cols: 1, rows: 1, color: '#DDBDF1', viewers: 0},
+      {user: '', text: 'Share Your Document', cols: 1, rows: 1, color: '#FFFFFF', viewers: 0}
+    ];
 
     //sample API call
     //TODO: supposedly able to search for videos. but api key exceeded the daily quota.
